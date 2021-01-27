@@ -1,5 +1,14 @@
 package week1;
 
+/**
+ * Using primitive variables in our programs.
+ * Primitive data only store the data and have no extra functionality.
+ * The primitive data types we will be using this year are:
+ * int: integers
+ * double: decimal numbers
+ * boolean: true and false
+ * char:  characters (they have an int that is associated with each character)
+ */
 public class VariablesAndAssignmentOperator {
   public static void main(String[] args) {
     exampleOne();
