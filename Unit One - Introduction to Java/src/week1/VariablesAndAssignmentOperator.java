@@ -7,13 +7,12 @@ package week1;
  * int: integers
  * double: decimal numbers
  * boolean: true and false
- * char:  characters (they have an int that is associated with each character)
+ * char:  characters (they have an int that is associated with each character) 
  */
 public class VariablesAndAssignmentOperator {
   public static void main(String[] args) {
     exampleOne();
     exampleTwo();
-    
   }
 
   private static void exampleTwo() {
