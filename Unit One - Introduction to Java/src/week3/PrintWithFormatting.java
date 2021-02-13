@@ -5,7 +5,7 @@ package week3;
  * We can also specify the number of decimal places we want.
  * Lastly, we can pad numbers with zeros (on the left)
  * 
- * TTis is all done using String.format() which takes a string containing placeholders (%d and %f)
+ * This is all done using String.format() which takes a string containing placeholders (%d and %f)
  * Watch the video in Teams for a full description on how it works.
  */
 public class PrintWithFormatting {
