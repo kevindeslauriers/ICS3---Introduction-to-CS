@@ -14,10 +14,10 @@ public class CrossCountryAssignment {
   }
 
   private static void processRunner(Scanner in) {
-    System.out.print("Please enter runner's first Name");
+    System.out.print("Please enter runner's First Name: ");
     String fName = in.nextLine();
 
-    System.out.print("Please enter runner's Last Name");
+    System.out.print("Please enter runner's Last Name: ");
     String lName = in.nextLine();
 
 
