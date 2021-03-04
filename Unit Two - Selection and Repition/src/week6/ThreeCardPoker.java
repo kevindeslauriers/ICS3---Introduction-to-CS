@@ -21,6 +21,27 @@ public class ThreeCardPoker {
     System.out.println("Player: " + playerHand);
     System.out.println("Dealer: " + dealerHand);
 
+    String card1 = getCard(1, "10D 3C 10S");
+    String card2 = getCard(2, "10D 3C 10S");
+    String card3 = getCard(3, "10D 3C 10S");
+
+  }
+
+  private static String getCard(int index, String hand) {
+    if (index == 1)
+      return hand.substring(0, hand.indexOf(" "));
+    else {
+      String temp = hand.substring(hand.indexOf(" ") + 1);
+      if (index == 2)
+        return temp.substring(0, temp.indexOf(" "));
+      else if (index == 3)
+        return temp.substring(temp.indexOf(" ") + 1);
+      else {
+        throw new IllegalArgumentException("Only have 3 cards!");
+      }
+
+    }
+
   }
 
   private static String dealCards() {
