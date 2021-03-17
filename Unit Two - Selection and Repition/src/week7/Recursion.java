@@ -11,6 +11,11 @@ public class Recursion {
      * for (int i = 1; i < 60; i++) { long test = fibonacci(i); System.out.println(i
      * + ": " + test); }
      */
+
+    System.out.println("\nMystery10:\n");
+    System.out.println(mystery10(1234));
+    System.exit(0);
+
     System.out.println("\nMystery1:\n");
     System.out.println(mystery1(6, 13));
     System.out.println(mystery1(14, 10));
@@ -227,6 +232,14 @@ public class Recursion {
       System.out.print(y);
       mystery9(x / 10);
       System.out.print(y);
+    }
+  }
+
+  private static int mystery10(int x) {
+    if (x < 10) {
+      return x;
+    } else {
+      return x + mystery10(mystery10(x / 10));
     }
   }
 }
