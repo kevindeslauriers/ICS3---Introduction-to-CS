@@ -12,7 +12,88 @@ public class SortingAndSearchingAlgorithms {
     // display(nums1);
 
     int arr[] = merge(nums, nums1);
-    display(arr);
+    // display(arr);
+
+    int[] arr2 = createRandomArray(20);
+    // display(arr2);
+
+    // System.out.println("\n\n-----------------\n" + sequentialSearch(arr2, 5));
+
+    selectionSort(arr2);
+    // System.out.println("\n\n-----------------\n" + binarySearch(arr2, 5));
+
+    int[] arr3 = createRandomArray(20);
+    display(arr3);
+    selectionSort(arr3);
+    System.out.println("\n\n-----------------\n" + binarySearch(arr3, 5, 0, arr3.length - 1));
+  }
+
+  private static int binarySearch(int[] arr, int findMe) {
+    int left = 0;
+    int right = arr.length - 1;
+
+    while (left <= right) {
+      int mid = (left + right) / 2;
+      if (arr[mid] == findMe)
+        return mid;
+      else if (arr[mid] > findMe) {
+        right = mid - 1;
+      } else {
+        left = mid + 1;
+      }
+    }
+
+    return -1;
+
+  }
+
+  private static int binarySearch(int[] arr, int findMe, int left, int right) {
+    if (left > right)
+      return -1;
+    else {
+      int mid = (left + right) / 2;
+      if (arr[mid] == findMe)
+        return mid;
+      else if (arr[mid] > findMe) {
+        return binarySearch(arr, findMe, left, mid - 1);
+      } else {
+        return binarySearch(arr, findMe, mid + 1, right);
+      }
+
+    }
+
+  }
+
+  /*
+   * private static void mergeSort(int[] arr) { mergeSort(arr, 0, arr.length / 2,
+   * arr.length - 1); }
+   */
+  /**
+   * linear search that locates the index of the element findMe
+   * 
+   * @param arr2
+   * @return index of findMe, -1 if it is not there
+   */
+  private static int sequentialSearch(int[] arr, int findMe) {
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == findMe)
+        return i;
+    }
+
+    return -1;
+  }
+
+  private static void mergeSort(int[] arr, int i, int j, int k) {
+
+  }
+
+  private static int[] createRandomArray(int num) {
+    int arr[] = new int[num];
+    for (int i = 0; i < num; i++) {
+      arr[i] = (int) (Math.random() * 20) + 1;
+    }
+
+    return arr;
   }
 
   /**
